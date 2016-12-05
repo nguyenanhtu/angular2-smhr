@@ -1,0 +1,46 @@
+.navbar-inverse.topnav-dashboard {
+	border: none;
+	border-radius: 0;
+	background: #464763;
+	color: #f5f5f5;
+}
+
+.navbar-header .navbar-brand, .trial-text, .lookup {
+	color:  #f5f5f5;
+	padding:  28px;
+}
+
+.dropdown.user-profile {
+	border-left: 2px solid #416fb8;
+	padding: 3px;
+}
+
+.dropdown.user-profile b.caret {
+	border-top-width: 0;
+    border-bottom: 4px solid #f5f5f5;
+    margin-bottom: 40%;
+}
+
+.form-control {
+	border: none;
+    box-shadow: 0 3px 2px -2px green;
+    width: 86%;
+}
+
+.checkbox-collection {
+    position: relative;
+    /* height: 100%; */
+    min-height: 300px;
+}
+
+.checkbox-collection .checkbox {
+	position: absolute;
+}
+
+.checkbox.second-ck {
+	margin-top: 40px;
+}
+
+.checkbox.last-ck {
+	bottom: 0;
+}
