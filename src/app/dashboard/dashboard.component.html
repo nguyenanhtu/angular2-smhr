@@ -1,0 +1,93 @@
+<nav class="navbar navbar-default navbar-inverse topnav-dashboard" role="navigation">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">smhr</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="lookup" href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+				<li class="trial-text">Your trial ends in 30 days</li>
+				<li class="dropdown user-profile">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i> <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-2">
+			Sidebar
+		</div>
+		<div class="col-md-10">
+			<button type="button" class="btn btn-default" (click)="modal.open('lg')">
+				<i class="fa fa-plus" aria-hidden="true"></i>Add time off
+			</button>
+		</div>
+	</div>
+</div>
+
+<modal #modal>
+    <modal-body>
+    	<div class="container">
+	    	<h1>Add new employee</h1>
+	    	<form #f="ngForm"
+	    		  (ngSubmit)="onSubmit(f.value)">
+		    	<div class="row">
+		    		<div class="col-md-3">
+		    			<div class="form-group">
+							<i class="fa fa-user-circle-o fa-5x" aria-hidden="true" style="font-size: 15em;"></i>
+		    			</div>
+		    		</div>
+		    		<div class="col-md-4">
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" name="name" class="form-control" id="name">
+						</div>
+						<div class="form-group">
+							<label for="name">Work email</label>
+							<input type="email" name="email" class="form-control" id="email">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" name="password" class="form-control" id="password">
+						</div>
+						<div class="form-group">
+							<label for="start-date">Employee start date</label>
+							<input type="text" name="start-date" class="form-control" id="start-date">
+						</div>
+		    		</div>
+		    		<div class="col-md-2 checkbox-collection">
+		    			<p>Time-off policies</p>
+		    			<div class="checkbox">
+							<label><input type="checkbox" value="">Vacation</label>
+						</div>
+						<div class="checkbox second-ck">
+							<label><input type="checkbox" value="">Sick day</label>
+						</div>
+						<div class="checkbox last-ck">
+							<label><input type="checkbox" value="">Send Welcome email</label>
+						</div>
+		    		</div>
+		    	</div>
+		    </form>
+		</div>
+    </modal-body>
+    <modal-footer [show-default-buttons]="true"></modal-footer>
+</modal>
